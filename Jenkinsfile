@@ -23,7 +23,7 @@ pipeline{
         }
         stage('Build'){
             steps{
-                dir("${MVN_PATH}"){
+                dir("${WORKSPACE}"){
                     sh 'mvn clean package'
                 }
             }
