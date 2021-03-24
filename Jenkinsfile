@@ -28,5 +28,15 @@ pipeline{
                 }
             }
         }
+	stage('Run'){
+		steps{
+			sh 'java -cp ${WORKSPACE}/target/mvn-project-1-1.0-SNAPSHOT.jar myTest.com.App'
+		}
+	}
+    }
+    post{
+	always{
+		cleanWs()
+        }
     }
 }
