@@ -37,7 +37,7 @@ pipeline{
     post{
 	always{
 		echo "Archiving artifacts"
-		archiveArtifacts allowEmptyArchive: false, artifacts: "target/mvn-project-1-1.0-SNAPSHOT.jar", defaultExcludes: false, fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
+		archiveArtifacts allowEmptyArchive: false, artifacts: 'target/mvn-project-1-1.0-SNAPSHOT.jar', defaultExcludes: false, fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
 	}
 	cleanup{
 		echo "Clean up of working directory"
